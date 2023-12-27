@@ -19,7 +19,6 @@ export default function IsEven() {
   console.log('Answer "yes" if the number is even, otherwise answer "no".');
   for (let i = 0; i < 3; i += 1) {
     const number = getRandomInt(1, 100);
-    console.log(`Question: ${number}`);
     const CorrectAnswer = getCorrectAnswer(number);
     const UserAnswer = askQuestion(number);
     if (UserAnswer !== CorrectAnswer) {
