@@ -3,7 +3,7 @@ import {
   askQuestion,
   compare,
   getRandomInt,
-} from './index.js';
+} from '../index.js';
 
 function getCorrectAnswer(number) {
   return number % 2 === 0 ? 'yes' : 'no';

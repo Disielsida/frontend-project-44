@@ -3,7 +3,7 @@ import {
   askQuestion,
   compare,
   getRandomInt,
-} from './index.js';
+} from '../index.js';
 
 function getRandomOperator() {
   const operators = ['+', '-', '*'];
