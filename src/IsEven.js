@@ -1,8 +1,9 @@
-import { userName, askQuestion, compare } from './index.js';
-
-function getRandomInt(min, max) {
-  return Math.floor(Math.random() * (max - min + 1)) + min;
-}
+import {
+  userName,
+  askQuestion,
+  compare,
+  getRandomInt,
+} from './index.js';
 
 function getCorrectAnswer(number) {
   return number % 2 === 0 ? 'yes' : 'no';
