@@ -24,9 +24,9 @@ export default function Isprime() {
   const name = userName();
   console.log('Answer "yes" if given number is prime. Otherwise answer "no".');
   for (let i = 0; i < 3; i += 1) {
-    const number = getRandomInt(1, 100);
-    const correctAnswer = getCorrectAnswer(number);
-    const userAnswer = askQuestion(number);
+    const num = getRandomInt(1, 100);
+    const correctAnswer = getCorrectAnswer(num);
+    const userAnswer = askQuestion(num);
     const comparison = compare(userAnswer, correctAnswer);
     if (comparison === 'lose') {
       return console.log(`Let's try again, ${name}!`);
