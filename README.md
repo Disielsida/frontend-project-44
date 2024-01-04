@@ -20,3 +20,25 @@ Brain Games is a collection of console-based logic games designed to train the m
 
 ## Brain-prime game
 [![Brain-prime game](img/brain-prime.png)](https://asciinema.org/a/AeArBBpUb9bzDUbsHaUh5lQOH)
+
+## System Requirements
+This project requires Node.js version 20.10.0 or higher.
+Please make sure you have Node.js installed before proceeding with the setup.
+
+
+## Installation
+To get started with Brain Games, follow these simple steps:
+
+1. **Clone this repository:**
+    git clone hhttps://github.com/Disielsida/frontend-project-44.git
+
+2. **Navigate to the project directory:**
+    cd frontend-project-44
+
+3. **Install dependencies:**
+    npm install
+4. **Run the project:**
+    npm start
+
+Now you're all set to enjoy and play the Brain Games on your local machine!
+
