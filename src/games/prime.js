@@ -5,7 +5,7 @@ import {
   getRandomInt,
 } from '../index.js';
 
-function getCorrectAnswer(number) {
+const getCorrectAnswer = (number) => {
   if (number <= 1) {
     return 'no';
   }
@@ -18,9 +18,9 @@ function getCorrectAnswer(number) {
     }
   }
   return 'yes';
-}
+};
 
-export default function isPrime() {
+const prime = () => {
   const name = userName();
   console.log('Answer "yes" if given number is prime. Otherwise answer "no".');
   for (let i = 0; i < 3; i += 1) {
@@ -34,4 +34,6 @@ export default function isPrime() {
   }
   console.log(`Congratulations, ${name}!`);
   return 'win';
-}
+};
+
+export default prime;

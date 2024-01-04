@@ -5,7 +5,7 @@ import {
   getRandomInt,
 } from '../index.js';
 
-function getProgression() {
+const getProgression = () => {
   const a = getRandomInt(0, 100);
   const d = getRandomInt(1, 10);
   const progression = [a];
@@ -15,9 +15,9 @@ function getProgression() {
     progression.push(nextTerm);
   }
   return progression;
-}
+};
 
-export default function prog() {
+const prog = () => {
   const name = userName();
   console.log('What number is missing in the progression?');
   for (let i = 0; i < 3; i += 1) {
@@ -33,4 +33,6 @@ export default function prog() {
   }
   console.log(`Congratulations, ${name}!`);
   return 'win';
-}
+};
+
+export default prog;

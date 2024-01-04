@@ -5,13 +5,13 @@ import {
   getRandomInt,
 } from '../index.js';
 
-function getRandomOperator() {
+const getRandomOperator = () => {
   const operators = ['+', '-', '*'];
   const randomIndex = Math.floor(Math.random() * operators.length);
   return operators[randomIndex];
-}
+};
 
-function calculateExp(num1, operator, num2) {
+const calculateExp = (num1, operator, num2) => {
   switch (operator) {
     case '+':
       return num1 + num2;
@@ -22,9 +22,9 @@ function calculateExp(num1, operator, num2) {
     default:
       return console.log('Неверный оператор');
   }
-}
+};
 
-export default function calc() {
+const calc = () => {
   const name = userName();
   console.log('What is the result of the expression?');
   for (let i = 0; i < 3; i += 1) {
@@ -40,4 +40,6 @@ export default function calc() {
   }
   console.log(`Congratulations, ${name}!`);
   return 'win';
-}
+};
+
+export default calc;

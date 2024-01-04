@@ -5,7 +5,7 @@ import {
   getRandomInt,
 } from '../index.js';
 
-function getCorrectAnswer(num1, num2) {
+const getCorrectAnswer = (num1, num2) => {
   let a = num1;
   let b = num2;
   if (num1 > num2) {
@@ -22,9 +22,9 @@ function getCorrectAnswer(num1, num2) {
     b = temp;
   }
   return b;
-}
+};
 
-export default function gcd() {
+const gcd = () => {
   const name = userName();
   console.log('Find the greatest common divisor of given numbers.');
   for (let i = 0; i < 3; i += 1) {
@@ -39,4 +39,6 @@ export default function gcd() {
   }
   console.log(`Congratulations, ${name}!`);
   return 'win';
-}
+};
+
+export default gcd;
