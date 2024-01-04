@@ -18,5 +18,5 @@ Brain Games is a collection of console-based logic games designed to train the m
 ## Brain-progression game
 [![Brain-progression game](img/brain-progression.png)](https://asciinema.org/a/WmC7gPyDReen0zXEejVyW5pg5)
 
-## Brain-even game
-[![Brain-even game](img/brain-even.png)](https://asciinema.org/a/AeArBBpUb9bzDUbsHaUh5lQOH)
+## Brain-prime game
+[![Brain-prime game](img/brain-prime.png)](https://asciinema.org/a/AeArBBpUb9bzDUbsHaUh5lQOH)
