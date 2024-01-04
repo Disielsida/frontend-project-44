@@ -23,7 +23,7 @@ export default function prog() {
   for (let i = 0; i < 3; i += 1) {
     const progression = getProgression();
     const randomIndex = getRandomInt(0, 10);
-    const correctAnswer = progression[randomIndex];
+    const correctAnswer = Number(progression[randomIndex]);
     progression[randomIndex] = '..';
     const userAnswer = Number(askQuestion(progression.join(' ')));
     const comparison = compare(userAnswer, correctAnswer);
