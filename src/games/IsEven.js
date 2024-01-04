@@ -5,11 +5,9 @@ import {
   getRandomInt,
 } from '../index.js';
 
-function getCorrectAnswer(number) {
-  return number % 2 === 0 ? 'yes' : 'no';
-}
+const getCorrectAnswer = (number) => (number % 2 === 0 ? 'yes' : 'no');
 
-export default function isEven() {
+const isEven = () => {
   const name = userName();
   console.log('Answer "yes" if the number is even, otherwise answer "no".');
   for (let i = 0; i < 3; i += 1) {
@@ -23,4 +21,6 @@ export default function isEven() {
   }
   console.log(`Congratulations, ${name}!`);
   return 'win';
-}
+};
+
+export default isEven;
