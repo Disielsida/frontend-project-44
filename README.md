@@ -6,7 +6,7 @@
 
 Brain Games is a collection of console-based logic games designed to train the mind and develop logical thinking. This project consists of several games, each of which assesses different aspects of logic and mathematics.
 
-https://asciinema.org/a/p7IYqxOVDKigA1CSb5QdgVCwx
+[![Game brain-even](img/brain-even.png)](https://asciinema.org/a/p7IYqxOVDKigA1CSb5QdgVCwx)
 
 https://asciinema.org/a/ZdK7P7xjJn700azIzngekbZMI
 
