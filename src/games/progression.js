@@ -20,19 +20,23 @@ const getProgression = () => {
 const prog = () => {
   const name = userName();
   console.log('What number is missing in the progression?');
+
   for (let i = 0; i < 3; i += 1) {
     const progression = getProgression();
-    const randomIndex = getRandomInt(0, 10);
-    const correctAnswer = Number(progression[randomIndex]);
-    progression[randomIndex] = '..';
-    const userAnswer = Number(askQuestion(progression.join(' ')));
-    const comparison = compare(userAnswer, correctAnswer);
+    const hiddenElementIndex = getRandomInt(0, progression.length - 1);
+    const correctAnswer = progression[hiddenElementIndex];
+    progression[hiddenElementIndex] = '..';
+
+    const userAnswer = askQuestion(progression.join(' '));
+    const comparison = compare(Number(userAnswer), correctAnswer);
+
     if (comparison === 'lose') {
-      return console.log(`Let's try again, ${name}!`);
+      console.log(`Let's try again, ${name}!`);
+      return;
     }
   }
+
   console.log(`Congratulations, ${name}!`);
-  return 'win';
 };
 
 export default prog;
