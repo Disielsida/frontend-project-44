@@ -1,7 +1,10 @@
+// Примерный код из файла cli.js
 import readlineSync from 'readline-sync';
 
-export default function userName() {
+const userName = () => {
   console.log('Welcome to the Brain Games!');
-  const name = readlineSync.question('May I have you name?: ');
+  const name = readlineSync.question('May I have your name? ');
   console.log(`Hello, ${name}!`);
-}
+};
+
+export default userName;
