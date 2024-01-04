@@ -7,7 +7,7 @@ import {
 
 const getCorrectAnswer = (number) => (number % 2 === 0 ? 'yes' : 'no');
 
-const isEven = () => {
+const even = () => {
   const name = userName();
   console.log('Answer "yes" if the number is even, otherwise answer "no".');
   for (let i = 0; i < 3; i += 1) {
@@ -23,4 +23,4 @@ const isEven = () => {
   return 'win';
 };
 
-export default isEven;
+export default even;
