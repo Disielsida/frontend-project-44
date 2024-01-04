@@ -9,7 +9,7 @@ function getCorrectAnswer(number) {
   return number % 2 === 0 ? 'yes' : 'no';
 }
 
-export default function IsEven() {
+export default function isEven() {
   const name = userName();
   console.log('Answer "yes" if the number is even, otherwise answer "no".');
   for (let i = 0; i < 3; i += 1) {
@@ -22,4 +22,5 @@ export default function IsEven() {
     }
   }
   console.log(`Congratulations, ${name}!`);
+  return 'win';
 }

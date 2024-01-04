@@ -1,5 +1,4 @@
 #!/usr/bin/env node
-import Isprime from '../src/games/prime.js';
+import isPrime from '../src/games/isPrime.js';
 
-console.log('Welcome to the Brain Games!');
-Isprime();
+isPrime();
