@@ -9,8 +9,9 @@ const getProgression = () => {
   const a = getRandomInt(0, 100);
   const d = getRandomInt(1, 10);
   const progression = [a];
+  const progressionLength = 10;
   let nextTerm = a;
-  for (let i = 0; i < 9; i += 1) {
+  for (let i = 1; i < progressionLength; i += 1) {
     nextTerm += d;
     progression.push(nextTerm);
   }
