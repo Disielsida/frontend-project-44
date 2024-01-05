@@ -37,8 +37,6 @@ To get started with Brain Games, follow these simple steps:
 
 3. **Install dependencies:**
     npm install
-4. **Run the project:**
-    npm start
 
 Now you're all set to enjoy and play the Brain Games on your local machine!
 
