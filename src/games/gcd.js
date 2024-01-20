@@ -23,8 +23,8 @@ const getCorrectAnswer = (num1, num2) => {
 };
 
 const logicFn = () => {
-  const num1 = getRandomInt(1, 100);
-  const num2 = getRandomInt(1, 100);
+  const num1 = getRandomInt();
+  const num2 = getRandomInt();
   const correctAnswer = getCorrectAnswer(num1, num2);
   const question = `${num1} ${num2}`;
   return [correctAnswer.toString(), question];

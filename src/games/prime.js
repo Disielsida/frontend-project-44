@@ -19,7 +19,7 @@ const isPrime = (number) => {
 };
 
 const logicFn = () => {
-  const number = getRandomInt(1, 100);
+  const number = getRandomInt();
   const question = `${number}`;
   const correctAnswer = isPrime(number);
   return [correctAnswer, question];
