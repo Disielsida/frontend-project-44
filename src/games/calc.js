@@ -1,9 +1,7 @@
-import {
-  userName,
-  askQuestion,
-  compare,
-  getRandomInt,
-} from '../index.js';
+import prepareGame from '../index.js';
+import getRandomInt from '../utils.js';
+
+const gameRules = 'What is the result of the expression?';
 
 const getRandomOperator = () => {
   const operators = ['+', '-', '*'];
@@ -24,22 +22,17 @@ const calculateExp = (num1, operator, num2) => {
   }
 };
 
+const logicFn = () => {
+  const num1 = getRandomInt(1, 100);
+  const num2 = getRandomInt(1, 100);
+  const operator = getRandomOperator();
+  const correctAnswer = calculateExp(num1, operator, num2);
+  const question = `${num1} ${operator} ${num2}`;
+  return [correctAnswer.toString(), question];
+};
+
 const calc = () => {
-  const name = userName();
-  console.log('What is the result of the expression?');
-  for (let i = 0; i < 3; i += 1) {
-    const num1 = getRandomInt(1, 100);
-    const num2 = getRandomInt(1, 100);
-    const operator = getRandomOperator();
-    const correctAnswer = calculateExp(num1, operator, num2);
-    const userAnswer = Number(askQuestion(`${num1} ${operator} ${num2}`));
-    const comparison = compare(userAnswer, correctAnswer);
-    if (comparison === 'lose') {
-      return console.log(`Let's try again, ${name}!`);
-    }
-  }
-  console.log(`Congratulations, ${name}!`);
-  return 'win';
+  prepareGame(gameRules, logicFn);
 };
 
 export default calc;

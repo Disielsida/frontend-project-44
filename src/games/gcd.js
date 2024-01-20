@@ -1,9 +1,7 @@
-import {
-  userName,
-  askQuestion,
-  compare,
-  getRandomInt,
-} from '../index.js';
+import prepareGame from '../index.js';
+import getRandomInt from '../utils.js';
+
+const gameRules = 'Find the greatest common divisor of given numbers.';
 
 const getCorrectAnswer = (num1, num2) => {
   let a = num1;
@@ -24,21 +22,16 @@ const getCorrectAnswer = (num1, num2) => {
   return b;
 };
 
+const logicFn = () => {
+  const num1 = getRandomInt(1, 100);
+  const num2 = getRandomInt(1, 100);
+  const correctAnswer = getCorrectAnswer(num1, num2);
+  const question = `${num1} ${num2}`;
+  return [correctAnswer.toString(), question];
+};
+
 const gcd = () => {
-  const name = userName();
-  console.log('Find the greatest common divisor of given numbers.');
-  for (let i = 0; i < 3; i += 1) {
-    const num1 = getRandomInt(1, 100);
-    const num2 = getRandomInt(1, 100);
-    const correctAnswer = getCorrectAnswer(num1, num2);
-    const userAnswer = Number(askQuestion(`${num1} ${num2}`));
-    const comparison = compare(userAnswer, correctAnswer);
-    if (comparison === 'lose') {
-      return console.log(`Let's try again, ${name}!`);
-    }
-  }
-  console.log(`Congratulations, ${name}!`);
-  return 'win';
+  prepareGame(gameRules, logicFn);
 };
 
 export default gcd;

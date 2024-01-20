@@ -1,47 +1,27 @@
 import readlineSync from 'readline-sync';
 
-const userName = () => {
+const rounds = 3;
+
+const prepareGame = (gameRules, logicFn) => {
   console.log('Welcome to the Brain Games!');
-  const name = readlineSync.question('May I have you name?: ');
-  console.log(`Hello, ${name}!`);
-  return name;
-};
+  const userName = readlineSync.question('May I have you name?: ');
+  console.log(`Hello, ${userName}!`);
 
-const getRandomInt = (min, max) => Math.floor(Math.random() * (max - min + 1)) + min;
+  console.log(gameRules);
 
-const askQuestion = (expression) => {
-  console.log(`Question: ${expression}`);
-  return readlineSync.question('Your answer: ');
-};
-
-const compare = (userAnswer, correctAnswer) => {
-  if (userAnswer !== correctAnswer) {
-    console.log(`'${userAnswer}' is wrong answer ;(. Correct answer was '${correctAnswer}'.`);
-    return 'lose';
-  }
-  return console.log('Correct!');
-};
-
-const prepareGame = (questionText, logicFn) => {
-  const name = userName();
-  console.log(questionText);
-  for (let i = 0; i < 3; i += 1) {
-    const number = getRandomInt(1, 100);
-    const correctAnswer = logicFn(number);
-    const userAnswer = askQuestion(number);
-    const comparison = compare(userAnswer, correctAnswer);
-    if (comparison === 'lose') {
-      console.log(`Let's try again, ${name}!`);
-      return;
+  for (let i = 0; i !== rounds; i += 1) {
+    const [correctAnswer, question] = logicFn();
+    console.log(`Question: ${question}`);
+    const userAnswer = readlineSync.question('Your answer: ');
+    if (userAnswer !== correctAnswer) {
+      console.log(`'${userAnswer}' is wrong answer ;(. Correct answer was '${correctAnswer}'.`);
+      console.log(`Let's try again, ${userName}!`);
+      return 'lose';
     }
+    console.log('Correct!');
   }
-  console.log(`Congratulations, ${name}!`);
+  console.log(`Congratulations, ${userName}!`);
+  return 'win';
 };
 
-export {
-  userName,
-  askQuestion,
-  compare,
-  getRandomInt,
-  prepareGame,
-};
+export default prepareGame;
