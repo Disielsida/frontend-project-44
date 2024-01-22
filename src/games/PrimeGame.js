@@ -18,15 +18,15 @@ const isPrime = (number) => {
   return 'yes';
 };
 
-const logicFn = () => {
+const generateQuestionAndCorrectAnswer = () => {
   const number = getRandomInt();
   const question = `${number}`;
   const correctAnswer = isPrime(number);
   return [correctAnswer, question];
 };
 
-const prime = () => {
-  prepareGame(gameRules, logicFn);
+const runPrimeGame = () => {
+  prepareGame(gameRules, generateQuestionAndCorrectAnswer);
 };
 
-export default prime;
+export default runPrimeGame;

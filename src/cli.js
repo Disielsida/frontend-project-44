@@ -1,4 +1,3 @@
-// Примерный код из файла cli.js
 import readlineSync from 'readline-sync';
 
 const userName = () => {

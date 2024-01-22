@@ -5,7 +5,7 @@ const gameRules = 'What is the result of the expression?';
 
 const getRandomOperator = () => {
   const operators = ['+', '-', '*'];
-  const randomIndex = Math.floor(Math.random() * operators.length);
+  const randomIndex = getRandomInt(0, 2);
   return operators[randomIndex];
 };
 
@@ -18,11 +18,11 @@ const calculateExp = (num1, operator, num2) => {
     case '*':
       return num1 * num2;
     default:
-      return console.log('Неверный оператор');
+      throw new Error('Unknown operator!');
   }
 };
 
-const logicFn = () => {
+const generateQuestionAndCorrectAnswer = () => {
   const num1 = getRandomInt();
   const num2 = getRandomInt();
   const operator = getRandomOperator();
@@ -31,8 +31,8 @@ const logicFn = () => {
   return [correctAnswer.toString(), question];
 };
 
-const calc = () => {
-  prepareGame(gameRules, logicFn);
+const runCalcGame = () => {
+  prepareGame(gameRules, generateQuestionAndCorrectAnswer);
 };
 
-export default calc;
+export default runCalcGame;

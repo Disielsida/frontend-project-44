@@ -4,25 +4,15 @@ import getRandomInt from '../utils.js';
 const gameRules = 'Find the greatest common divisor of given numbers.';
 
 const getCorrectAnswer = (num1, num2) => {
-  let a = num1;
-  let b = num2;
-  if (num1 > num2) {
-    while (b !== 0) {
-      const temp = b;
-      b = a % b;
-      a = temp;
-    }
-    return a;
+  let a = Math.max(num1, num2);
+  let b = Math.min(num1, num2);
+  while (b !== 0) {
+    [a, b] = [b, a % b];
   }
-  while (a !== 0) {
-    const temp = a;
-    a = b % a;
-    b = temp;
-  }
-  return b;
+  return a;
 };
 
-const logicFn = () => {
+const generateQuestionAndCorrectAnswer = () => {
   const num1 = getRandomInt();
   const num2 = getRandomInt();
   const correctAnswer = getCorrectAnswer(num1, num2);
@@ -30,8 +20,8 @@ const logicFn = () => {
   return [correctAnswer.toString(), question];
 };
 
-const gcd = () => {
-  prepareGame(gameRules, logicFn);
+const runGreatestСommonDivisorGame = () => {
+  prepareGame(gameRules, generateQuestionAndCorrectAnswer);
 };
 
-export default gcd;
+export default runGreatestСommonDivisorGame;

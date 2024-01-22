@@ -16,7 +16,7 @@ const getProgression = () => {
   return progression;
 };
 
-const logicFn = () => {
+const generateQuestionAndCorrectAnswer = () => {
   const progression = getProgression();
   const hiddenElementIndex = getRandomInt(0, progression.length - 1);
   const correctAnswer = progression[hiddenElementIndex];
@@ -25,8 +25,8 @@ const logicFn = () => {
   return [correctAnswer.toString(), question];
 };
 
-const prog = () => {
-  prepareGame(gameRules, logicFn);
+const runProgressionGame = () => {
+  prepareGame(gameRules, generateQuestionAndCorrectAnswer);
 };
 
-export default prog;
+export default runProgressionGame;
