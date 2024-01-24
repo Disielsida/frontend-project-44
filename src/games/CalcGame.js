@@ -18,11 +18,11 @@ const calculateExp = (num1, operator, num2) => {
     case '*':
       return num1 * num2;
     default:
-      throw new Error('Unknown operator!');
+      throw new Error(`Unknown operator! This operator: ${operator}, num1: ${num1}, num2: ${num2}`);
   }
 };
 
-const generateQuestionAndCorrectAnswer = () => {
+const generateAnswerQuestion = () => {
   const num1 = getRandomInt();
   const num2 = getRandomInt();
   const operator = getRandomOperator();
@@ -32,7 +32,7 @@ const generateQuestionAndCorrectAnswer = () => {
 };
 
 const runCalcGame = () => {
-  prepareGame(gameRules, generateQuestionAndCorrectAnswer);
+  prepareGame(gameRules, generateAnswerQuestion);
 };
 
 export default runCalcGame;

@@ -18,7 +18,7 @@ const getAnswerOfPrimeness = (number) => {
   return 'yes';
 };
 
-const generateQuestionAndCorrectAnswer = () => {
+const generateAnswerQuestion = () => {
   const number = getRandomInt();
   const question = `${number}`;
   const correctAnswer = getAnswerOfPrimeness(number);
@@ -26,7 +26,7 @@ const generateQuestionAndCorrectAnswer = () => {
 };
 
 const runPrimeGame = () => {
-  prepareGame(gameRules, generateQuestionAndCorrectAnswer);
+  prepareGame(gameRules, generateAnswerQuestion);
 };
 
 export default runPrimeGame;

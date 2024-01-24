@@ -8,7 +8,7 @@ const checkParity = (number) => {
   return result;
 };
 
-const generateQuestionAndCorrectAnswer = () => {
+const generateAnswerQuestion = () => {
   const number = getRandomInt(1, 10);
   const question = `${number}`;
   const correctAnswer = checkParity(number);
@@ -16,7 +16,7 @@ const generateQuestionAndCorrectAnswer = () => {
 };
 
 const runEvenGame = () => {
-  prepareGame(gameRules, generateQuestionAndCorrectAnswer);
+  prepareGame(gameRules, generateAnswerQuestion);
 };
 
 export default runEvenGame;
