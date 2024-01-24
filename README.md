@@ -14,7 +14,7 @@ To get started with Brain Games, follow these simple steps:
 3. **Install dependencies:**
     npm install
 
-Now you're all set to enjoy and play the Brain Games on your local device!
+Now you're all set to enjoy and play the Brain Games on your local machine!
 
 ### Hexlet tests and linter status:
 [![Actions Status](https://github.com/Disielsida/frontend-project-44/actions/workflows/hexlet-check.yml/badge.svg)](https://github.com/Disielsida/frontend-project-44/actions)
